@@ -1,0 +1,24 @@
+﻿@model NewsItem
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Model.Title</title>
+
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <img src="@Model.ImageUrl" class="card-img-top" alt="News Image" />
+            <div class="card-body">
+                <h2 class="card-title">@Model.Title</h2>
+                <p class="card-text">@Html.Raw(Model.BodyText)</p>
+                <hr />
+                <small class="text-muted">@Model.PublishDate</small>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+</html>
