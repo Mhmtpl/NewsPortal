@@ -20,19 +20,21 @@ namespace NewsPortal.Controllers
         {
             const int pageSize = 5;
 
+            // Ana sayfa verilerini alma işlemi
             var homepageData = await _newsService.GetHomepageDataAsync();
 
             if (homepageData != null && homepageData.Data != null && homepageData.Data.Any())
             {
                 var allNewsItems = homepageData.Data.SelectMany(d => d.ItemList).ToList();
 
-
+                // Anahtar kelimeye göre filtreleme
                 if (!string.IsNullOrEmpty(keyword))
                 {
                     allNewsItems = allNewsItems.Where(item => item.Title?.Contains(keyword, StringComparison.OrdinalIgnoreCase) ?? false).ToList();
                     ViewBag.Keyword = keyword;
                 }
 
+                // Kategoriye göre filtreleme
                 if (!string.IsNullOrEmpty(categoryId))
                 {
                     allNewsItems = allNewsItems.Where(item => item.Category?.CategoryId == categoryId).ToList();

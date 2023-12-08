@@ -14,6 +14,7 @@ namespace NewsPortal.Controllers
 
         public async Task<IActionResult> Index(string itemId)
         {
+            // Haber detaylarını alma işlemi
             var detailResponse = await _newsService.GetNewsDetailAsync();
 
             if (detailResponse != null && detailResponse.Data != null && detailResponse.Data.NewsDetail != null)
@@ -23,7 +24,7 @@ namespace NewsPortal.Controllers
                 return View(newsDetail);
             }
 
-            return View("Error"); // Eğer detay alınamazsa Error.cshtml görünümünü göster
+            return View();
         }
     }
 }
