@@ -1,6 +1,6 @@
 # Turkmedya Haber Uygulaması
 
-Bu proje, .NET Core 7 platformunda geliştirilen bir haber uygulamasıdır. Turkmedya'nın sunduğu haber verilerini alarak, kullanıcılara belirli kategorilerdeki haberleri ve detaylarını gösterir. Ayrıca sayfalama özelliği ve filtreleme seçenekleri sunar.
+Turkmedya'nın sunduğu haber verilerini alarak, kullanıcılara belirli kategorilerdeki haberleri ve detaylarını gösterir. Ayrıca sayfalama özelliği ve filtreleme seçenekleri sunar.
 
 ## Özellikler
 
