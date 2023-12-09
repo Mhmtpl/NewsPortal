@@ -13,7 +13,7 @@ Turkmedya'nın sunduğu haber verilerini alarak, kullanıcılara belirli kategor
 
 - `HomeController`: Anasayfa için haberleri alır, filtreler ve sayfalara böler.
 - `DetailController`: Haber detaylarını gösterir.
-- `INewsService` ve `NewsService`: Turkmedya API'larından veri alır.
+- `INewsService` ve `NewsService`: Turkmedya Json dosyalarından veri alır.
 
 ## Nasıl Kullanılır?
 
